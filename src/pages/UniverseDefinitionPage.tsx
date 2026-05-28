@@ -8,7 +8,7 @@ import { type UniverseDefinitionEntry } from '@/types/universe-types'
 import { Header } from '@/components/common/Header'
 import { Layout } from '@/components/common/Layout'
 import { CSVUploader } from '@/components/common/CSVUploader'
-import { Upload } from 'lucide-react'
+import { Download, Upload } from 'lucide-react'
 import { UniverseFilters } from '@/components/universe-definition/UniverseFilters'
 import { useUniverseStore } from '@/store/universeStore'
 import { useUniverseDefinitionData } from '@/hooks/hooks'
@@ -91,6 +91,18 @@ export function UniverseDefinitionPage() {
       headerName: 'SUD',
       width: 120,
       pinned: 'right' as const,
+      cellRenderer: (_) => {
+        return (
+          <div className="flex  gap-2">
+            <div className="p-1 rounded-md cursor-pointer">
+              <Download className="h-4 w-4 text-muted-foreground" />
+            </div>
+            <div className="bg-black p-1 rounded cursor-pointer">
+              <Upload className="h-4 w-4 text-white bg-black" />
+            </div>
+          </div>
+        )
+      },
     },
     {
       field: 'asset',
