@@ -23,7 +23,7 @@ const CONTRIBUTORS = [
   'James Patterson',
 ]
 
-const ASSETS = ['equity', 'fx', 'credit', 'commodity', 'ir']
+//const ASSETS = ['equity', 'fx', 'credit', 'commodity', 'ir']
 const TYPES = ['vanilla', 'barrier', 'exotic', 'structured', 'forward']
 const STATUSES = ['active', 'pending', 'archived', 'inactive']
 

@@ -91,7 +91,7 @@ export function UniverseDefinitionPage() {
       headerName: 'SUD',
       width: 120,
       pinned: 'right' as const,
-      cellRenderer: (_) => {
+      cellRenderer: () => {
         return (
           <div className="flex  gap-2">
             <div className="p-1 rounded-md cursor-pointer">

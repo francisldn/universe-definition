@@ -16,7 +16,7 @@ type DateRange = {
 }
 
 export function DateRangeFilter() {
-  const { setFilterDateRange, filterDateRange } = useUniverseStore()
+  const { setFilterDateRange } = useUniverseStore()
   const [range, setRange] = React.useState<DateRange>({
     from: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000), // Default to one week range
     to: new Date(Date.now()), // Default to one week range
