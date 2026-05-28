@@ -42,7 +42,7 @@ function filterUniverseDefinition(
   filters: UniverseDefinitionFilterOptions,
 ): UniverseDefinitionEntry[] {
   return data.filter((entry) => {
-    const matchesName = filters.name ? entry.id.includes(filters.name) : true
+    const matchesName = filters.name ? entry.service.toLowerCase().includes(filters.name.toLowerCase()) : true
     const matchesService = filters.service ? entry.service === filters.service : true
     const matchesRegion = filters.region ? entry.region === filters.region : true
     const matchesAsset = filters.asset ? entry.asset === filters.asset : true
@@ -74,7 +74,7 @@ export function generateUniverseDefinitionData(filterOptions?: UniverseDefinitio
       service: getRandomItem(SERVICES),
       region: getRandomItem(REGIONS),
       submittedBy: getRandomItem(CONTRIBUTORS),
-      asset: getRandomItem(ASSETS),
+      asset: 'equity',
       type: getRandomItem(TYPES),
       status: getRandomItem(STATUSES),
     })

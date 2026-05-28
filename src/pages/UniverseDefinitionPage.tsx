@@ -108,7 +108,6 @@ export function UniverseDefinitionPage() {
       field: 'asset',
       headerName: 'Asset',
       width: 100,
-      hide: true,
     },
     {
       field: 'type',
